@@ -25,7 +25,7 @@ public class DisciplinaService {
 		return new DisciplinaDTO(id, newDisciplina);
 	}
 
-	public DisciplinasDTO getDisciplinas() {
+	public List<DisciplinaDTO> getDisciplinas() {
 		List<DisciplinaDTO> disciplinas = new ArrayList<DisciplinaDTO>();
 		
 		for(int id=0; id < this.disciplinas.size(); id++) {
@@ -33,7 +33,7 @@ public class DisciplinaService {
 				disciplinas.add(new DisciplinaDTO(id, this.disciplinas.get(id)));
 		}
 		
-		return new DisciplinasDTO(disciplinas);
+		return disciplinas;
 	}
 	
 	public ResponseEntity<DisciplinaDTO> getDisciplina(int id){
@@ -85,7 +85,7 @@ public class DisciplinaService {
 			return new ResponseEntity<DisciplinaDTO>(HttpStatus.NOT_FOUND);
 	}
 	
-	public DisciplinasDTO getRankingDisciplinas() {
+	public List<DisciplinaDTO> getRankingDisciplinas() {
 		List<DisciplinaDTO> disciplinas = new ArrayList<DisciplinaDTO>();
 		
 		for(int id=0; id < this.disciplinas.size(); id++) {
@@ -95,6 +95,6 @@ public class DisciplinaService {
 		
 		Collections.sort(disciplinas, new ComparadorPorNota());
 				
-		return new DisciplinasDTO(disciplinas);
+		return disciplinas;
 	}
 }

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import psoft.ufcg.dto.DisciplinaDTO;
 import psoft.ufcg.dto.DisciplinasDTO;
 import psoft.ufcg.entities.Disciplina;
@@ -25,22 +27,22 @@ public class DisciplinaController {
 	@Autowired
 	private DisciplinaService disciplinaService;
 
-	@RequestMapping("/v1/api/teste")
+	@GetMapping("/v1/api/teste")
 	public ResponseEntity<Teste> getTest() {
 		return new ResponseEntity<Teste>(new Teste("Hii, i'm Spring Boot Application"), HttpStatus.OK);
 	}
 
 	@PostMapping("/v1/api/disciplinas")
 	public ResponseEntity<Disciplina> postDisciplina(@RequestBody Disciplina newDisciplina) {
-		return new ResponseEntity<Disciplina>(disciplinaService.postDisciplina(newDisciplina), HttpStatus.OK);
+		return new ResponseEntity<Disciplina>(disciplinaService.postDisciplina(newDisciplina), HttpStatus.CREATED);
 	}
 
-	@RequestMapping("/v1/api/disciplinas")
-	public ResponseEntity<DisciplinasDTO> getDisciplinas(){
-		return new ResponseEntity<DisciplinasDTO>(disciplinaService.getDisciplinas(), HttpStatus.OK);
+	@GetMapping("/v1/api/disciplinas")
+	public ResponseEntity<List<DisciplinaDTO>> getDisciplinas(){
+		return new ResponseEntity<List<DisciplinaDTO>>(disciplinaService.getDisciplinas(), HttpStatus.OK);
 	}
 	
-	@RequestMapping("/v1/api/disciplinas/{id}")
+	@GetMapping("/v1/api/disciplinas/{id}")
 	public ResponseEntity<DisciplinaDTO> getDisciplina(@PathVariable("id") int id){
 		return disciplinaService.getDisciplina(id);
 	}
@@ -56,8 +58,8 @@ public class DisciplinaController {
 	}
 	
 	@RequestMapping("/v1/api/disciplinas/ranking")
-	public ResponseEntity<DisciplinasDTO> getRankingDisciplinas(){
-		return new ResponseEntity<DisciplinasDTO>(disciplinaService.getRankingDisciplinas(), HttpStatus.OK);
+	public ResponseEntity<List<DisciplinaDTO>> getRankingDisciplinas(){
+		return new ResponseEntity<List<DisciplinaDTO>>(disciplinaService.getRankingDisciplinas(), HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/v1/api/disciplinas/{id}")
