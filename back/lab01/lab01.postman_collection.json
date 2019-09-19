@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "de4e784d-f49d-42b8-8163-effc4a726b62",
+		"name": "lab01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get teste",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/teste",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"teste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post disciplina 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"projeto de software\",\n\t\"nota\": 9.5\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas?",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "\"Thiago\"",
+							"disabled": true
+						},
+						{
+							"key": "nota",
+							"value": "9.50",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post disciplina 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"paradigmas de linguagem de programação\",\n    \"nota\": 9.9\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post disciplina 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"introdução ao probabilidade\",\n    \"nota\": 9\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplinas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplina 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplina 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplina 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplina 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplinas ranking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/ranking",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del disciplina 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put disciplina 2 (nota)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nota\": 9.7\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/2/nota",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"2",
+						"nota"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put disciplina 2 (nome)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Cálculo I\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/api/disciplinas/2/nome",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"disciplinas",
+						"2",
+						"nome"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
