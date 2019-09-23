@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "ceeea6c4-9dbb-4cd2-8801-cacc8bf6c5d9",
+		"name": "lab02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post usuario 1 201",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"thiago.souza@ccc.ufcg.edu.br\",\n\t\"nome\":\"Thiago Yuri Evaristo de Souza\",\n\t\"senha\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post usuario 1 403",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"thiago.souza@ccc.ufcg.edu.br\",\n\t\"nome\":\"Thiago Yuri Evaristo de Souza\",\n\t\"senha\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post login usuario 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"thiago.souza@ccc.ufcg.edu.br\",\n\t\"senha\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete usuario 1 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjYxNTQ3fQ.Pcj2zPeWlC2wLzPBGiXDResR07rNIk4uonoLETIIlXcI127VJoKyikelQKdSkmMFmXGg_NPGZrejlgI1lVfidg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/auth/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete usuario 1 500",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjYxNTQ3fQ.Pcj2zPeWlC2wLzPBGiXDResR07rNIk4uonoLETIIlXcI127VJoKyikelQKdSkmMFmXGg_NPGZrejlgI1lVfidg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/auth/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplinas 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplinas 1 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get disciplinas 1 404",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put like disciplinas 1 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MDQwfQ.6VixWx2b6-R5Jva46qYashR2c7P9s3C9_FY8RAKzne5K_cOTaUT8_VcF6ncltwHAv7phw3HroTdSC0lgW2gpVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/likes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"likes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put like disciplinas 1 401",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/likes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"likes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put like disciplinas 1 404",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MDQwfQ.6VixWx2b6-R5Jva46qYashR2c7P9s3C9_FY8RAKzne5K_cOTaUT8_VcF6ncltwHAv7phw3HroTdSC0lgW2gpVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/likes/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"likes",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put nota disciplinas 1 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MTk0fQ.4ggBry1DfWLwJn0FIJPx-XuJop4DqlHQ_ZVJwoV-BpqLw396t1VX5cnpC9MH0XtOcEBtwTKz5xPkNLQfZERz7g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nota\":10\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/nota/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"nota",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put nota disciplinas 1 401",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/nota/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"nota",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put nota disciplinas 1 404",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MTk0fQ.4ggBry1DfWLwJn0FIJPx-XuJop4DqlHQ_ZVJwoV-BpqLw396t1VX5cnpC9MH0XtOcEBtwTKz5xPkNLQfZERz7g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/nota/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"nota",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ranking notas disciplinas 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/ranking/notas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"ranking",
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ranking likes disciplinas 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/ranking/likes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"ranking",
+						"likes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
