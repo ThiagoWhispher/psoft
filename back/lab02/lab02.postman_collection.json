@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ceeea6c4-9dbb-4cd2-8801-cacc8bf6c5d9",
+		"_postman_id": "1f16f8df-028e-47a4-846d-3c4f0d06c6b6",
 		"name": "lab02",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -102,7 +102,6 @@
 				},
 				"method": "DELETE",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/auth/usuarios",
 					"host": [
@@ -170,7 +169,6 @@
 				},
 				"method": "GET",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas",
 					"host": [
@@ -200,7 +198,6 @@
 				},
 				"method": "GET",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/1",
 					"host": [
@@ -231,7 +228,6 @@
 				},
 				"method": "GET",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/0",
 					"host": [
@@ -255,16 +251,15 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MDQwfQ.6VixWx2b6-R5Jva46qYashR2c7P9s3C9_FY8RAKzne5K_cOTaUT8_VcF6ncltwHAv7phw3HroTdSC0lgW2gpVA",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5Mjc5ODYyfQ.cZic_v0OIJvPuVbAwjO7ptSid9vOHhGb8sKcjZ0vP4zszNY6qS9BIiYTamNMAIn60cZPoXJTCHabRRFFDv_qKA",
 							"type": "string"
 						}
 					]
 				},
 				"method": "PUT",
 				"header": [],
-				"body": {},
 				"url": {
-					"raw": "localhost:8080/api/disciplinas/likes/1",
+					"raw": "localhost:8080/api/disciplinas/likes/2",
 					"host": [
 						"localhost"
 					],
@@ -273,7 +268,7 @@
 						"api",
 						"disciplinas",
 						"likes",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -294,7 +289,6 @@
 				},
 				"method": "PUT",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/likes/1",
 					"host": [
@@ -319,14 +313,13 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MDQwfQ.6VixWx2b6-R5Jva46qYashR2c7P9s3C9_FY8RAKzne5K_cOTaUT8_VcF6ncltwHAv7phw3HroTdSC0lgW2gpVA",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5Mjc5MjYxfQ.VzM70N8Px-C0GMugAF7dM3aUxFlzbbMsJEgYVgnfOuA9r7hmz1iMtVDOycp_chyEumj4Pk6ZrBvphjqs8CMsgg",
 							"type": "string"
 						}
 					]
 				},
 				"method": "PUT",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/likes/0",
 					"host": [
@@ -351,7 +344,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MTk0fQ.4ggBry1DfWLwJn0FIJPx-XuJop4DqlHQ_ZVJwoV-BpqLw396t1VX5cnpC9MH0XtOcEBtwTKz5xPkNLQfZERz7g",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5Mjc5OTA4fQ.7w5pKoEUszKpycYZlyg-47L88w9s0VYC4gbJ-A5fSZZz2eS7p0Bg8DlLfpq-8oHrIBIuKgMtTGIIyk9x_c8UsA",
 							"type": "string"
 						}
 					]
@@ -360,15 +353,22 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json"
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"nota\":10\n}"
+					"raw": "{\n\t\"nota\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/disciplinas/nota/1",
+					"raw": "localhost:8080/api/disciplinas/nota/2",
 					"host": [
 						"localhost"
 					],
@@ -377,7 +377,7 @@
 						"api",
 						"disciplinas",
 						"nota",
-						"1"
+						"2"
 					]
 				}
 			},
@@ -398,7 +398,6 @@
 				},
 				"method": "PUT",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/nota/1",
 					"host": [
@@ -423,14 +422,29 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5MjY1MTk0fQ.4ggBry1DfWLwJn0FIJPx-XuJop4DqlHQ_ZVJwoV-BpqLw396t1VX5cnpC9MH0XtOcEBtwTKz5xPkNLQfZERz7g",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5Mjc5NDA3fQ.-vfAa1yrk051WovJfpgz8pCZpAHbl47LkNUAWIcRkEUc6W5__9WqhlqWl1XbgoWz0UTpKTMXu8ylbJyNm_QYwA",
 							"type": "string"
 						}
 					]
 				},
 				"method": "PUT",
-				"header": [],
-				"body": {},
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nota\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/nota/0",
 					"host": [
@@ -441,6 +455,147 @@
 						"api",
 						"disciplinas",
 						"nota",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put comentarios disciplinas 1 200",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5Mjc5NzQwfQ.Hpw-HCIYdHi9W8cQDMKsuGmku0J-tOCMc9npROJKNWecz4ylcBbsmecDUp5zbDOEoQXyQW4aqOeco3lEYVR33g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comentarios\": \"top demais\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/comentarios/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"comentarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put comentarios disciplinas 1 401",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comentarios\": \"top demais\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/comentarios/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"comentarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put comentarios disciplinas 1 404",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0aGlhZ28uc291emFAY2NjLnVmY2cuZWR1LmJyIiwiZXhwIjoxNTY5Mjc5ODI4fQ.rjdq98eYH_y-UAo7d5XciKSGMB0qMJhoSl73zOEIouluQlL8V20apFnZwJDijVdp470cb-3442IHiEPvxard5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comentarios\": \"top demais\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/disciplinas/comentarios/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disciplinas",
+						"comentarios",
 						"0"
 					]
 				}
@@ -462,7 +617,6 @@
 				},
 				"method": "GET",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/ranking/notas",
 					"host": [
@@ -494,7 +648,6 @@
 				},
 				"method": "GET",
 				"header": [],
-				"body": {},
 				"url": {
 					"raw": "localhost:8080/api/disciplinas/ranking/likes",
 					"host": [
@@ -511,5 +664,6 @@
 			},
 			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
