@@ -13,7 +13,6 @@ import psoft.ufcg.utils.Lab02ApplicationConstants;
 
 @Service
 public class JWTService {
-	//private UsuarioService usuariosService;
 
 	public String generateToken(String email) {
 		return Jwts.builder().setSubject(email)

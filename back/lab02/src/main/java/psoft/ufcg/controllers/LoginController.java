@@ -29,14 +29,14 @@ public class LoginController {
 	private JWTService jwtService;
 
 	@PostMapping("/login")
-	public LoginResponse authenticate(@RequestBody Usuario usuario) throws ServletException {
+	public ResponseEntity<LoginResponse> authenticate(@RequestBody Usuario usuario) throws ServletException {
 		Optional<Usuario> authUsuario = usuarioService.getUsuario(usuario.getEmail());
 		if (!authUsuario.isPresent())
 			throw new ServletException("Usuario nao encontrado!");
 		verifyPassword(usuario, authUsuario);
 
 		String token = jwtService.generateToken(authUsuario.get().getEmail());
-		return new LoginResponse(token);
+		return new ResponseEntity<LoginResponse>(new LoginResponse(token), HttpStatus.OK);
 
 	}
 
@@ -50,8 +50,10 @@ public class LoginController {
 		} catch (ServletException e) {
 
 		}
-		return new ResponseEntity<Usuario>(usuario.get(), HttpStatus.OK);
-
+		if(usuario.isPresent())
+			return new ResponseEntity<Usuario>(usuario.get(), HttpStatus.OK);
+		else
+			return new ResponseEntity<Usuario>(HttpStatus.BAD_REQUEST);
 	}
 
 	private void verifyPassword(Usuario usuario, Optional<Usuario> authUsuario) throws ServletException {

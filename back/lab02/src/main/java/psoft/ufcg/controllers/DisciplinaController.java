@@ -73,7 +73,7 @@ public class DisciplinaController {
 			return new ResponseEntity<DisciplinaIdNomeNota>(HttpStatus.NOT_FOUND);
 	}
 	
-	@PostMapping("/api/disciplinas/comentarios/{id}")
+	@PutMapping("/api/disciplinas/comentarios/{id}")
 	public ResponseEntity<DisciplinaIdNomeComentarios> putDisciplinaComentario(@PathVariable("id") Long id, @RequestBody Disciplina disciplinaComentario){
 		Optional<Disciplina> disciplinaOpt = this.disciplinaService.getDisciplina(id);
 		
